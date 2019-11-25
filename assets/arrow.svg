@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="37" height="281" version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  	<style>
+      rect, line { shape-rendering: crispEdges; }
+      svg .option { display: none }
+      svg .option:target { display: inline } 
+    </style>
+    <g id="arrow" stroke-miterlimit="10" fill="none">
+	  <line x1="18.5" y1="110" x2="18.5" y2="1"/>
+	  <line x1="18.5" y1="281" x2="18.5" y2="148"/>
+	  <polyline points="23,127.5 18.5,132 14,127.5"/>
+	  <rect x=".5" y="110.5" width="36" height="36"/>
+	</g>
+  </defs>
+  <svg id="gris" class="option" viewBox="0 0 37 281"  stroke="#79726E">
+  	<use x="0" y="0" xlink:href="#arrow"/>
+  </svg>
+  <svg id="blanco" class="option" viewBox="0 0 37 281" stroke="#ffffff">
+  	<use x="0" y="0" xlink:href="#arrow"/>
+  </svg>
+
+</svg>

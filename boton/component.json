@@ -1,0 +1,11 @@
+{
+    "name": "suit-boton",
+    "repo": "user/suit-boton",
+    "version": "0.0.0",
+    "styles": ["boton.css"],
+    "dependencies": {},
+    "development": {
+        "suitcss/test": "*"
+    },
+    "license": "MIT"
+}

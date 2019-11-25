@@ -1,0 +1,22 @@
+{
+  "name": "mc",
+  "version": "0.1.0",
+  "description": "Muebles Conceptuales",
+  "main": "web/css/master.css",
+  "authors": [
+    "Jorge González"
+  ],
+  "license": "MIT",
+  "homepage": "www.mueblesconceptuales.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "suit-button": "~3.0.0"
+  }
+}

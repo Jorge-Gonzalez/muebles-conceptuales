@@ -1,0 +1,58 @@
+@import paleta
+@import compass/css3
+
+svg .option
+  display: none
+  &:target
+    display: inline
+
+rect, line
+  shape-rendering: crispEdges
+
+svg
+  stroke-miterlimit: 10
+  cursor: pointer
+
+#bg
+  fill: none
+  pointer-events: all
+
+#main-arrow, #about-arrow
+  @include transition( all .5s ease-out )
+  &:hover, &.hover
+    transform: translateY(3em)
+
+#icon
+  stroke-width: 3
+  fill: none
+
+#box
+  @include transition( all .5s ease-out )
+  fill: $blanco
+
+#main-arrow
+
+  #elements
+    stroke: $gris
+
+  &:hover, &.hover
+    #box
+      fill: $cafe
+    #icon
+      stroke: $blanco
+
+#about-arrow
+
+  #elements
+    stroke: $blanco
+
+  #box
+    fill: $cafe
+
+  &:hover, &.hover
+    #box
+      fill: $naranja
+    #icon
+      stroke: $blanco
+
+

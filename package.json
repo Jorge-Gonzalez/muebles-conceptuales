@@ -1,0 +1,46 @@
+{
+  "name": "mueblesconceptuales",
+  "version": "0.1.0",
+  "author": "Jorge González",
+  "private": true,
+  "devDependencies": {
+    "grunt": "1.0.4",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-pug": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssc": "*",
+    "grunt-htmlhint": "*",
+    "matchdep": "*"
+  },
+  "description": "Sitio web Muebles Conceptuales.",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorge-Gonzalez/muebles-conceptuales.git"
+  },
+  "keywords": [
+    "mobiliario",
+    "arte",
+    "website",
+    "Node",
+    "Grunt",
+    "Sass",
+    "Compass",
+    "Bower",
+    "Jade",
+    "Cofeescript",
+    "jQuery"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jorge-Gonzalez/muebles-conceptuales/issues"
+  },
+  "homepage": "https://github.com/Jorge-Gonzalez/muebles-conceptuales#readme"
+}

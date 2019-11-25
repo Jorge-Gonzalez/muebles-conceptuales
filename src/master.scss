@@ -1,0 +1,169 @@
+// paleta
+$cafe: #1e1c1b;
+$gris: #79726e;
+$naranja: #d88d30;
+$blanco: white;
+$ancho: 1021px;
+$alto: 660px;
+
+.logo1 {
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+.logo2 {
+  font-size: 19px;
+  margin-top: 7px;
+}
+#logo {
+  width: 249px;
+  text-align: right;
+  position: absolute;
+  left: 60px;
+  top: 12px;
+  float: left;
+}
+#wrapper {
+  width: $ancho;
+  height: 3000px;
+  margin: 0 auto;
+  background-color: $gris;
+  padding: 0;
+  position: relative;
+}
+#index {
+  width: $ancho;
+  height: $alto;
+  margin: 0;
+  background-color: $blanco;
+  padding: 0;
+}
+body {
+  background-color: $cafe;
+  font-family: 'corbertregular';
+  font-size: 11px;
+  color: $gris;
+  margin: 0;
+  padding: 0;
+}
+#main_image {
+  position: absolute;
+  margin-top: 57px;
+  margin-left: 505px;
+}
+#main_message {
+  position: absolute;
+  top: 297px;
+  left: 113px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: none;
+  }
+}
+#main_box {
+  border: 1px solid $gris;
+  text-align: center;
+  padding: 10px 22px 0px 22px;
+  -webkit-transition:background-color .6s;
+  -moz-transition:background-color .6s;
+  -ms-transition:background-color .6s;
+  transition:background-color .6s;
+  &:hover {
+    background: $cafe;
+  }
+}
+#main_arrow {
+  
+}
+.call {
+  font-size: 36px;
+  color: $naranja;
+  margin: 0px 0px 13px 0px;
+  padding: 0px;
+  letter-spacing: 1px;
+}
+.credit {
+  margin: -16px 0px 9px 0px;
+  padding: 0px;
+  font-size: 12px;
+  text-align: right;
+}
+#main_image_footer {
+  position: absolute;
+  top: 310px;
+  left: 840px;
+  height: 82px;
+  font-size: 10px;
+  color: $gris;
+  line-height: 12px;
+}
+.bold {
+  color: $naranja;
+  font-size: 14px;
+  background-color: $cafe;
+  margin: 0px;
+  padding: 1px 2px 4px 2px;
+}
+#down {
+  position: absolute;
+  top: 379px;
+  left: 293px;
+}
+#about {
+  position: relative;
+  width: $ancho;
+  height: $alto;
+  background: url("../img/R_Morales.jpg") no-repeat right;
+}
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  a {
+    text-decoration: none;
+    color: saturate($naranja, 20%);
+    margin: 6px;
+    padding: 0px 4px;
+    &:hover {
+      background: $cafe;
+    }
+  }
+}
+#about_body {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 500px;
+  color: $blanco;
+  text-align: center;
+  .credit {
+    color: $naranja;
+    font-size: 11px;
+    margin: -8px 0px 2px 0px;
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
+}
+#about_message {
+  background: red;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+.about_box {
+  @extend .main_box;
+  
+}
+.center {
+  background: #222;
+  text-align: center;
+
+}
+#gallery {
+  position: relative;
+  width: $ancho;
+  height: $alto;
+  background: $cafe;
+}

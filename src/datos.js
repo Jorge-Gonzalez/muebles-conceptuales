@@ -1,0 +1,116 @@
+-var galeria = [
+-  {
+-    file: 'reventazon.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'pejibaye.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'durmiente1.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'durmiente2.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas:  '
+-  },
+-  {
+-    file: 'durmiente3.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'grietas.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'grietas2.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'laguna_azul.jpg',
+-    name: 'Nombre: ',
+-    mat: 'Materiales: ',
+-    dim: 'Dimensiones aproximadas: '
+-  },
+-  {
+-    file: 'reposo.jpg',
+-    name: 'Reposo',
+-    mat: 'Materiales: Madera rescatada del mar, patas de hierro.',
+-    dim: 'Dimensiones aproximadas: Largo 250cm.'
+-  },
+-  {
+-    file: 'entranas.jpg',
+-    name: 'Entrañas',
+-    mat: 'Materiales: Sobre de cedro de árbol caído, patas de Gravilia de cultivo, vidrio temperado.',
+-    dim: 'Dimensiones aproximadas: Largo 130cm, ancho 65cm, alto 43cm.'
+-  },
+-  {
+-    file: 'nance.jpg',
+-    name: 'Nance',
+-    mat: 'Materiales: Madera de nance de árbol caído, patas de Melina de plantación.',
+-    dim: 'Diámetro aproximado 100cm.'
+-  },
+-  {
+-    file: 'sasha.jpg',
+-    name: 'Sasha',
+-    mat: 'Materiales: Cuerpo en melina de plantación, patas y frente de gavetas en guanacaste.',
+-    dim: 'Dimensiones aproximadas: Largo 50cm, ancho 30cm, alto 170cm.'
+-  },
+-  {
+-    file: 'torres.jpg',
+-    name: 'Torres',
+-    mat: 'Materiales: Melina de plantación, detalles en pejibaye.',
+-    dim: 'Dimensiones aproximadas: Largo 46cm, ancho 30cm, alto 196cm.'
+-  },
+-  {
+-    file: 'departiendo.jpg',
+-    name: 'Departiendo',
+-    mat: 'Materiales: Sobre de cedro de árbol caído, base de melina de cultivo.',
+-    dim: 'Dimensiones aproximadas: Alto 110cm, diámetro 75cm.'
+-  },
+-  {
+-    file: 'mil_pies.jpg',
+-    name: 'Mil Pies',
+-    mat: 'Materiales: Madera de gravilia de plantación pintada, vidrio temperado.',
+-    dim: 'Dimensiones aproximadas: Largo 140cm, ancho 80cm, alto 60cm.'
+-  },
+-  {
+-    file: 'cien_pies.jpg',
+-    name: 'Cien Pies',
+-    mat: 'Materiales: Sobre de guanacaste, patas de gravilia de plantación con tinta.',
+-    dim: 'Dimensiones aproximadas: Largo: 225cm, ancho 45cm, alto 99cm.'
+-  },
+-  {
+-    file: 'raices.jpg',
+-    name: 'Raíces',
+-    mat: 'Materiales: Madera rescatada del mar, patas de guanacaste, vidrio temperado.',
+-    dim: 'Dimensiones aproximadas: Diámetro 80cm, alto 75cm.'
+-  },
+-  {
+-    file: 'trapiche.jpg',
+-    name: 'Trapiche',
+-    mat: 'Materiales: Pieza rescatada de trapiche manual y vidrio temperado.',
+-    dim: 'Dimensiones aproximadas: Largo 163cm, ancho 82cm, alto 35cm.'
+-  },
+-  {
+-    file: 'cocobolo.jpg',
+-    name: 'Cocobolo',
+-    mat: 'Materiales: Troncos de cocobolo rescatados, vidrio temperado.',
+-    dim: 'Dimensiones aproximadas: Largo 210cm, ancho 110cm, alto 75cm.'
+-  }
+-]
