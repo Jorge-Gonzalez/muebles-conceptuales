@@ -1,0 +1,19 @@
+
+
+images = [
+
+'2002-Abril-5_La-Nacion',
+'2000-Octubre-6_La-Nacion',
+'2008-Marzo-2_La-Nacion-b',
+'2000-Octubre-5_La-Nacion',
+'Julio-17_La-Nacion',
+'1993-Diciembre-16_Costa-Rica-Today',
+'1998-Setiembre-9-15_Semanario-Universidad',
+
+'La-Nacion',
+'1998-Setiembre-7_La-Nacion',
+'2008-Marzo-2_La-Nacion-a',
+'2004-Setiembre-26_La-Nacion',
+'1996-Agosto-22_Costa-Rica-Today'
+
+]

@@ -1,5 +1,5 @@
-@import paleta
 @import compass/css3
+@import paleta
 
 svg .option
   display: none
@@ -17,42 +17,27 @@ svg
   fill: none
   pointer-events: all
 
-#main-arrow, #about-arrow
-  @include transition( all .5s ease-out )
-  &:hover, &.hover
-    transform: translateY(3em)
-
 #icon
   stroke-width: 3
   fill: none
 
 #box
-  @include transition( all .5s ease-out )
+  +transition( all .5s ease-out )
   fill: $blanco
 
-#main-arrow
+#main_arrow
 
-  #elements
+  #arrow
     stroke: $gris
 
   &:hover, &.hover
+    #arrow
+      +transition( all .5s ease-out )
+      transform: translateY(3em)
     #box
+      +transition( all .5s ease-out )
       fill: $cafe
     #icon
+      +transition( all .5s ease-out )
       stroke: $blanco
-
-#about-arrow
-
-  #elements
-    stroke: $blanco
-
-  #box
-    fill: $cafe
-
-  &:hover, &.hover
-    #box
-      fill: $naranja
-    #icon
-      stroke: $blanco
-
 

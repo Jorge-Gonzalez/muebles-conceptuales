@@ -1,0 +1,12 @@
+<?xml-stylesheet type="text/css" href="../css/svg.css" ?>
+<svg version="1.1" viewBox="0 0 37 160"
+  xmlns="http://www.w3.org/2000/svg" >
+  <g id="about-arrow">
+    <rect id="bg" x="0" y="-100" width="37" height="400"/>
+    <g id="elements">
+      <line id="line" x1="18" y1="300" x2="18" y2="-100"/>
+      <rect id="box" x="1" y="60" width="36" height="36"/>
+      <polyline id="icon" points="23,76 18,81 13,76"/>
+    </g>
+  </g>
+</svg>

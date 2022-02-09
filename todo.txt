@@ -1,0 +1,6 @@
+concat minify css.
+uglyfy main.js
+push to github
+host website
+make a post about it
+redact curriculo and cover letter
