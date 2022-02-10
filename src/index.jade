@@ -61,7 +61,9 @@ body
         ul
           each item in galery_data
             li
-              img.block(src="gallery/" + item.file)
+              picture
+                source(type='image/avif' srcset='gallery/' + item.file + '.avif')
+                img.block(src='gallery/' + item.file + '.jpg' alt= item.name loading='lazy')
               .label_text
                 if item.disp
                   //no hay de otra que poner onclick
@@ -94,7 +96,7 @@ body
           each imgName, index in images
             .swiper-slide
               a(href='images/press/' + imgName + '.jpg', class='swipebox', title= imgName)
-                img(src='images/press/small/' + imgName + '_p.jpg')
+                img(src='images/press/small/' + imgName + '_p.jpg' alt= imgName loading='lazy')
 
     #Acerca.section
 
