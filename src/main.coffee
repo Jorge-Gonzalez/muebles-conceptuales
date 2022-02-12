@@ -92,10 +92,10 @@ $(document).ready(->
     postData = $(this).serializeArray()
     formURL = $(this).attr("action")
     $.ajax
-        url: formURL
-        type: "POST"
-        data: postData
-        success: (data, textStatus, jqXHR) ->
+      url: formURL
+      type: "POST"
+      data: postData
+      success: (data, textStatus, jqXHR) ->
         console.log data
         # MOSTRAR AVISO MENSAGE ENVIADO
         #data: return data from server
@@ -112,6 +112,10 @@ $(document).ready(->
   $("#content").perfectScrollbar({
     suppressScrollX: true
   })
+)
+
+window.addEventListener('DOMContentLoaded', (ev) -> 
+  Array.from(document.getElementsByClassName('lazy')).forEach((img) => img.src = img.dataset.src)
 )
 
 window.showItemsPopup = (id) ->
