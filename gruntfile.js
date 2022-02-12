@@ -62,7 +62,7 @@ module.exports = function(grunt){
     uglify: {
       build: {
         files: {
-          'dist/js/base.min.js': ['assets/js/base.js']
+          'dist/js/main.min.js': ['dist/js/main.js']
         }
       }
     },
