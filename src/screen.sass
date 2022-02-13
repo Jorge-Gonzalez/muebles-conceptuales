@@ -212,7 +212,10 @@ h1
       font-size: 20px
 
 #Acerca
-  background: url("../images/R_Morales.jpg") no-repeat right
+  background-image: url('../images/R_Morales.jpg')
+  background-image: image-set(url('../images/R_Morales.avif') type('image/avif'), url('../images/R_Morales.jpg') type('image/jpg'))
+  background-repeat: no-repeat
+  background-position: right
 
   .dot
     background: $blanco
@@ -291,7 +294,11 @@ h1
     right: 54px
 
 #Exposiciones
-  background: url(../images/silla_bg.jpg) no-repeat left bottom $blanco
+  background-image: url('../images/silla_bg.jpg')
+  background-image: image-set(url('../images/silla_bg.avif') type('image/avif'), url('../images/silla_bg.jpg') type('image/jpg'))
+  background-repeat: no-repeat
+  background-position: left bottom
+  background-color: $blanco
   .dot
     background: $gris
   .body
