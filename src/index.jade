@@ -18,17 +18,17 @@ body
 
   mixin menu(sec)
 
-    .nav
+    nav(role='navigation')
       each link in links
         unless link.href == sec
           a.scroll(id= link.href.slice(1) + 'Btn', href= link.href) #{link.text}
       span.dot
 
-  #wrapper
+  main#wrapper(role='main')
 
-    #Inicio.section
+    section#Inicio
       // logo
-      .logo
+      .logo(role='banner')
         // img(src='images/rm.svg', width='249', height='59', alt='RM')
         svg#rmlogo(width='249' height='59' viewBox='0 0 329.968 77.143' aria-labelledby='rm' role='img')
           title#rm R.M.
@@ -49,7 +49,7 @@ body
           | de Diseño del Mueble
       
       // boton y mensaje principal
-      #main_message
+      aside#main_message(role='complementary')
         a#GaleriaBtn.no-under.scroll(href='#Galeria')
           #main_box.box
             h1.call Uno ve lo que sabe.
@@ -60,7 +60,7 @@ body
               rect(id='box' x='.5' y='100.5' width='36' height='36')
               polyline(id='icon' points='23,116 18,121 13,116')
 
-    #Galeria.section
+    section#Galeria
 
       +menu('#Galeria')
 
@@ -85,7 +85,7 @@ body
                     | #{item.dim}
     
     // Publicaciones
-    #Prensa.section
+    section#Prensa
 
       +menu('#Prensa')
 
@@ -105,7 +105,7 @@ body
               a(href='images/press/' + imgName + '.jpg', class='swipebox', title= imgName)
                 img(src='images/press/small/' + imgName + '_p.jpg' alt= imgName loading='lazy')
 
-    #Acerca.section
+    section#Acerca
 
       +menu('#Acerca')
 
@@ -121,7 +121,7 @@ body
           p #{quote.text}
           p.credit #{quote.autor}
 
-    #Exposiciones.section
+    section#Exposiciones
 
       +menu('#Exposiciones')
 
@@ -135,30 +135,30 @@ body
                 each evnt in entry.events
                   p !{evnt}
 
-    #Contacto.section
+    section#Contacto
 
       +menu('#Contacto')
+      #ContactForm(role='form')
+        form.cmxform(action='contact-form.php', method='POST')
+          input#sesion(name='sesion', type='hidden')
+          .form
+            h1 Contáctenos :
+            label(for='name')
+              span Nombre
+              input#name.input_text(name='name', type='text', minlength='2', required)
+              input#last(name='last', type='text')
+            label(for='email')
+              span E-mail
+              input#email.input_text(name='email', type='email', required)
+            label
+              span Asunto
+              input#subject.input_text(name='subject', type='text')
+            label(for="message")
+              span Mensaje
+              textarea#message.message(name='message', required)
+              input.button(value='Enviar', type='submit')
 
-      form#contactForm.cmxform(action='contact-form.php', method='POST')
-        input#sesion(name='sesion', type='hidden')
-        .form
-          h1 Contáctenos :
-          label(for='name')
-            span Nombre
-            input#name.input_text(name='name', type='text', minlength='2', required)
-            input#last(name='last', type='text')
-          label(for='email')
-            span E-mail
-            input#email.input_text(name='email', type='email', required)
-          label
-            span Asunto
-            input#subject.input_text(name='subject', type='text')
-          label(for="message")
-            span Mensaje
-            textarea#message.message(name='message', required)
-            input.button(value='Enviar', type='submit')
-
-      .icons
+      .icons(role='contentinfo')
         .icon
           img(src='images/facebook.gif', alt='facebook')
         .icon
