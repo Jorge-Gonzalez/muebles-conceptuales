@@ -224,8 +224,8 @@ module.exports = {
     {
       year: '2003',
       events: [
-        '“Playing With Light and Shadow”, </br>Centro Cultural Costarricense Norteamericano. Conjunta con Loida Pretiz.',
-        'Primera Confrontación en el Arte 40 artistas 4 curadores, </br>Galería Nacional Museo de los Niños'
+        '“Playing With Light and Shadow”, <br />Centro Cultural Costarricense Norteamericano. Conjunta con Loida Pretiz.',
+        'Primera Confrontación en el Arte 40 artistas 4 curadores, <br />Galería Nacional Museo de los Niños'
       ]
     },
     {
@@ -245,14 +245,14 @@ module.exports = {
       events: [
         'Bienal Internacional Diseño. Saint Etttenney Francia',
         'Primera Feria Internacional de Artesanía (Fiapri). Puerto Rico.',
-        'Juegos de Luz y Sombra. Galería Sophia Wanamaker, </br>Centro Cultural Costarricense Norteamericano.'
+        'Juegos de Luz y Sombra. Galería Sophia Wanamaker, <br />Centro Cultural Costarricense Norteamericano.'
       ]
     },
     {
       year: '2001',
       events: [
-        'Contrastes Alternativos. Embajada de Francia en Costa Rica. </br>Múltiple Teorética Arte y Pensamiento. San José, Costa Rica.',
-        '28° Muestra Internacional de Artesanía de la Pontificia. </br>Universidad Católica de Chile, Santiago de Chile.'
+        'Contrastes Alternativos. Embajada de Francia en Costa Rica. <br />Múltiple Teorética Arte y Pensamiento. San José, Costa Rica.',
+        '28° Muestra Internacional de Artesanía de la Pontificia. <br />Universidad Católica de Chile, Santiago de Chile.'
       ]
     },
     {
@@ -265,7 +265,7 @@ module.exports = {
     {
       year: '1998',
       events: [
-        '25º  Muestra Internacional de Artesanía de la Pontificia. </br>Universidad Católica de Chile, Santiago de Chile.',
+        '25º  Muestra Internacional de Artesanía de la Pontificia. <br />Universidad Católica de Chile, Santiago de Chile.',
         '8º Muestra Iberoamericana de Artesanía de España y América. Tenerife, España.'
       ]
     },
@@ -278,7 +278,7 @@ module.exports = {
     {
       year: '1996',
       events: [
-        'Individual, Galena de Arte José Figueres. </br>Retrospectiva de la Primera Década de la Galería. (1986-1996 colectiva).'
+        'Individual, Galena de Arte José Figueres. <br />Retrospectiva de la Primera Década de la Galería. (1986-1996 colectiva).'
       ]
     },
     {
@@ -296,7 +296,7 @@ module.exports = {
     {
       year: '1993',
       events: [
-        'Museo de Arte y Artesanía Internacional en Taipéi </br>(selección de obras de los mejores artesanos a nivel mundial), República de China.'
+        'Museo de Arte y Artesanía Internacional en Taipéi <br />(selección de obras de los mejores artesanos a nivel mundial), República de China.'
       ]
     },
     {

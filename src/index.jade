@@ -1,191 +1,200 @@
 doctype html
+html(lang='es')
 
-head
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  link(href='css/screen.css' media='screen, projection' rel='stylesheet' type='text/css')
-  link(href='css/vendor.css' rel='stylesheet' type='text/css')
-  link(href='css/print.css' media='print' rel='stylesheet' type='text/css')
-  link(href='images/favicon.svg' rel='icon')
-  title Muebles Conceptuales
-  meta(name='description' content='Diseñador de muebles con vida propia, Rodolfo se ha convertido a sí mismo, por su intuición y tesón autodidactos, en un artista originalísimo que sabe que la historia le imprime a los seres, y a los objetos, su verdadera belleza.')
-  //
-    [if IE] 
-    <link href='css/ie.css' media='screen, projection' rel='stylesheet' type='text/css' />
-    [endif]
- 
-body
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(href='css/screen.css' media='screen' rel='stylesheet' type='text/css')
+    link(href='css/vendor.css' rel='stylesheet' type='text/css')
+    link(href='css/print.css' media='print' rel='stylesheet' type='text/css')
+    link(href='images/favicon.svg' rel='icon')
+    title Muebles Conceptuales
+    meta(name='description' content='Diseñador de muebles con vida propia, Rodolfo se ha convertido a sí mismo, por su intuición y tesón autodidactos, en un artista originalísimo que sabe que la historia le imprime a los seres, y a los objetos, su verdadera belleza.')
+    //
+      [if IE] 
+      <link href='css/ie.css' media='screen, projection' rel='stylesheet' type='text/css' />
+      [endif]
+   
+  body
 
-  mixin menu(sec)
+    mixin menu(sec)
 
-    nav(role='navigation')
-      each link in links
-        unless link.href == sec
-          a.scroll(id= link.href.slice(1) + 'Btn', href= link.href) #{link.text}
-      span.dot
+      nav
+        each link in links
+          unless link.href == sec
+            a.scroll(class= link.href.slice(1) + 'Btn', href= link.href) #{link.text}
+        span.dot
 
-  main#wrapper(role='main')
+    main#wrapper
 
-    section#Inicio
-      // logo
-      .logo(role='banner')
-        // img(src='images/rm.svg', width='249', height='59', alt='RM')
-        svg#rmlogo(width='249' height='59' viewBox='0 0 329.968 77.143' aria-labelledby='rm' role='img')
-          title#rm R.M.
-          g(fill='none' stroke='#000')
-            path(d='m329,60c-11-0-18-7-26-8-8-1-14,0-25-0-11-1-12-9-20-10-7-0-19,7-27,6-8-1-10-18-24-18-14,0-41,23-58,47 0,0-14-7-48-19-34-11-85-28-85-28s47-3 47-10c0-6-59-16-59-16')
-            path(d='m14,23-7,17')
+      section#Inicio
+        // logo
+        .logo(role='banner')
+          // img(src='images/rm.svg', width='249', height='59', alt='RM')
+          svg#rmlogo(width='249' height='59' viewBox='0 0 329.968 77.143' aria-labelledby='rm' role='img')
+            title#rm R.M.
+            g(fill='none' stroke='#000')
+              path(d='m329,60c-11-0-18-7-26-8-8-1-14,0-25-0-11-1-12-9-20-10-7-0-19,7-27,6-8-1-10-18-24-18-14,0-41,23-58,47 0,0-14-7-48-19-34-11-85-28-85-28s47-3 47-10c0-6-59-16-59-16')
+              path(d='m14,23-7,17')
+          h1 Rodolfo Morales
+          h2 MUEBLES &nbsp;CONCEPTUALES
+        
+        // imagen principal
+        // img#main_image(src='images/silla_aborigen.jpg', width='292', height='550', alt='Silla “Aborigen”')
+        img#main_image.lazy(
+          width="292"
+          height="550"
+          alt="Silla “Aborigen”"
+          src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20x='0px'%20y='0px'%20width='292px'%20height='550px'%20viewBox='0%200%20292%20550'%3E%20%3Cpath%20fill='%231E1C1B'%20d='M123,348l-21,150h10l27-138l37,3l-18,104h9l20-83l28,131l11-1l-24-149l2-1l-1-11l29-8l6,1l29,134l11-1l-24-132l2-1v-7c17.8-5,33-12,33-12v-3c-22.3,4.8-37,6-37,6s3-32,12.4-106S290,28,290,28h-6c0,0-15,115-20,156s-16,146-16,146l-10,1L266,1h-7l-7,87l-8,1l-26,241l-10-1l34-310h-6l-33,309l-9-1l16-279h-4l-17,278l-47-11l-60,14v3C82,332,101,341,123,348z%20M243,160c0,0-1-1-1-3s2-3,2-3l4-30c0,0,0,11-4,66c-4,56-12,140-12,140h-9L243,160z'/%3E%20%3C/svg%3E"
+          data-src="images/silla_aborigen.jpg"
+        )
+        #main_image_footer
+          h4 Silla “Aborigen”
+          p
+            | Gran Premio<br />
+            | Bienal Costarricense<br />
+            | de Diseño del Mueble
+        
+        // boton y mensaje principal
+        aside#main_message
+          a#GaleriaBtn.no-under.scroll(href='#Galeria')
+            #main_box.box
+              h3.call Uno ve lo que sabe.
+              p.credit Rudolph Arnheim&nbsp;
+            svg#main_arrow(width='37' height='281' viewbox='0 0 37 282' xmlns='http://www.w3.org/2000/svg')
+              g#arrow
+                line(id='line' x1='18.5' y1='300' x2='18.5' y2='-170')
+                rect(id='box' x='.5' y='100.5' width='36' height='36')
+                polyline(id='icon' points='23,116 18,121 13,116')
+
+      section#Galeria
+
+        h2 Galeria
+        +menu('#Galeria')
+
+        .box_skitter.box_skitter_large
+          ul
+            each item in galery_data
+              li
+                picture
+                  source(type='image/avif' srcset='gallery/' + item.file + '.avif')
+                  img.block(src='gallery/' + item.file + '.jpg' alt= item.name loading='lazy')
+                .label_text
+                  if item.disp
+                    //no hay de otra que poner onclick
+                    - var click ='showItemsPopup("#' + item.name.replace(/ /g, '_') + '")'
+                    .disp(onclick= click)
+                      p DISPONIBLE
+                  .desc
+                    h3 #{item.name}
+                    p 
+                      | #{item.mat}
+                      br 
+                      | #{item.dim}
+      
+      // Publicaciones
+      section#Prensa
+
+        h2 Prensa
+        +menu('#Prensa')
+
+        #press_message
+
+        .vertical-boxes.left
+        .vertical-boxes.right
+        
+        #swipe-left
+        #swipe-right
+
+        .swiper-container
+          .swiper-wrapper
+            each imgName, index in images
+              .swiper-slide
+                a(href='images/press/' + imgName + '.jpg', class='swipebox', title= imgName)
+                  img(src='images/press/small/' + imgName + '_p.jpg' alt= imgName loading='lazy')
+
+      section#Acerca
+
         h2 Rodolfo Morales
-        h3 MUEBLES &nbsp;CONCEPTUALES
-      
-      // imagen principal
-      // img#main_image(src='images/silla_aborigen.jpg', width='292', height='550', alt='Silla “Aborigen”')
-      img#main_image.lazy(width="292" height="550" data-src="https://leonard.alwaysdata.net/muebles-conceptuales/images/silla_aborigen.jpg" alt="Silla “Aborigen”" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='292px' height='550px' viewBox='0 0 292 550'> <path fill='%231E1C1B' d='M123,348l-21,150h10l27-138l37,3l-18,104h9l20-83l28,131l11-1l-24-149l2-1l-1-11l29-8l6,1l29,134l11-1l-24-132l2-1v-7c17.8-5,33-12,33-12v-3c-22.3,4.8-37,6-37,6s3-32,12.4-106S290,28,290,28h-6c0,0-15,115-20,156s-16,146-16,146l-10,1L266,1h-7l-7,87l-8,1l-26,241l-10-1l34-310h-6l-33,309l-9-1l16-279h-4l-17,278l-47-11l-60,14v3C82,332,101,341,123,348z M243,160c0,0-1-1-1-3s2-3,2-3l4-30c0,0,0,11-4,66c-4,56-12,140-12,140h-9L243,160z'/> </svg>")
-      #main_image_footer
-        h4 Silla “Aborigen”
-        p
-          | Gran Premio<br />
-          | Bienal Costarricense<br />
-          | de Diseño del Mueble
-      
-      // boton y mensaje principal
-      aside#main_message(role='complementary')
-        a#GaleriaBtn.no-under.scroll(href='#Galeria')
-          #main_box.box
-            h1.call Uno ve lo que sabe.
-            p.credit Rudolph Arnheim&nbsp;
-          svg#main_arrow(width='37' height='281' viewbox='0 0 37 282' xmlns='http://www.w3.org/2000/svg')
-            g#arrow
-              line(id='line' x1='18.5' y1='300' x2='18.5' y2='-170')
-              rect(id='box' x='.5' y='100.5' width='36' height='36')
-              polyline(id='icon' points='23,116 18,121 13,116')
+        +menu('#Acerca')
 
-    section#Galeria
+        .logo.sobre-gris
+          // img(src='images/rm.svg', width='249', height='59', alt='RM')
+          svg#secc(width="249" height="59")
+            use(xlink:href='#rmlogo')
+          h1 Rodolfo Morales
+          h2 MUEBLES &nbsp;CONCEPTUALES
 
-      +menu('#Galeria')
+        .body
+          each quote in quotes
+            p #{quote.text}
+            p.credit #{quote.autor}
 
-      .box_skitter.box_skitter_large
-        ul
-          each item in galery_data
-            li
-              picture
-                source(type='image/avif' srcset='gallery/' + item.file + '.avif')
-                img.block(src='gallery/' + item.file + '.jpg' alt= item.name loading='lazy')
-              .label_text
-                if item.disp
-                  //no hay de otra que poner onclick
-                  - var click ='showItemsPopup("#' + item.name.replace(/ /g, '_') + '")'
-                  .disp(onclick= click)
-                    p DISPONIBLE
-                .desc
-                  h3 #{item.name}
-                  p 
-                    | #{item.mat}
-                    br 
-                    | #{item.dim}
-    
-    // Publicaciones
-    section#Prensa
+      section#Exposiciones
 
-      +menu('#Prensa')
+        h2 Exposiciones
+        +menu('#Exposiciones')
 
-      #press_message
-        h1 Prensa
+        .body
+          #expoBody
+            each entry in expoText
+              .table
+                .caption #{entry.year}
+                .description
+                  each evnt in entry.events
+                    p !{evnt}
 
-      .vertical-boxes.left
-      .vertical-boxes.right
-      
-      #swipe-left
-      #swipe-right
+      section#Contacto
 
-      .swiper-container
-        .swiper-wrapper
-          each imgName, index in images
-            .swiper-slide
-              a(href='images/press/' + imgName + '.jpg', class='swipebox', title= imgName)
-                img(src='images/press/small/' + imgName + '_p.jpg' alt= imgName loading='lazy')
-
-    section#Acerca
-
-      +menu('#Acerca')
-
-      .logo.sobre-gris
-        // img(src='images/rm.svg', width='249', height='59', alt='RM')
-        svg#secc(width="249" height="59")
-          use(xlink:href='#rmlogo')
-        h2 Rodolfo Morales
-        h3 MUEBLES &nbsp;CONCEPTUALES
-
-      .body
-        each quote in quotes
-          p #{quote.text}
-          p.credit #{quote.autor}
-
-    section#Exposiciones
-
-      +menu('#Exposiciones')
-
-      .body
-        h1 Exposiciones
-        #expoBody
-          each entry in expoText
-            .table
-              .caption #{entry.year}
-              .description
-                each evnt in entry.events
-                  p !{evnt}
-
-    section#Contacto
-
-      +menu('#Contacto')
-      #ContactForm(role='form')
-        form.cmxform(action='contact-form.php', method='POST')
-          input#sesion(name='sesion', type='hidden')
-          .form
-            h1 Contáctenos :
-            label(for='name')
-              span Nombre
-              input#name.input_text(name='name', type='text', minlength='2', required)
-              input#last(name='last', type='text')
-            label(for='email')
-              span E-mail
-              input#email.input_text(name='email', type='email', required)
-            label
-              span Asunto
-              input#subject.input_text(name='subject', type='text')
-            label(for="message")
-              span Mensaje
-              textarea#message.message(name='message', required)
+        h2 Contacto
+        +menu('#Contacto')
+        #ContactForm(role='form')
+          form.cmxform(action='contact-form.php', method='POST')
+            input#sesion(name='sesion', type='hidden')
+            .form
+              h1 Contáctenos :
+              label(for='name')
+                span Nombre
+                input#name.input_text(name='name', type='text', minlength='2', required)
+              label(for='email')
+                span E-mail
+                input#email.input_text(name='email', type='email', required)
+              label
+                span Asunto
+                input#subject.input_text(name='subject', type='text')
+              label(for="message")
+                span Mensaje
+                textarea#message.message(name='message', required)
               input.button(value='Enviar', type='submit')
 
-      .icons(role='contentinfo')
-        .icon
-          img(src='images/facebook.gif', alt='facebook')
-        .icon
-          img(src='images/twitter.gif', alt='twitter')
-        .icon
-          img(src='images/phone.gif', alt='Telefonos')
-          p TEL 2221 1210
-          p FAX 2221 6413
-        .icon
-          img(src='images/location.gif', alt='Dirección')
-          p Calle 7, avenidas 12 y 14.
-          p San Jose, Paseo de los Estudiantes del BCR 100 mts oeste y 50 mts Sur.
+        .icons(role='contentinfo')
+          .icon
+            img(src='images/facebook.gif', alt='facebook')
+          .icon
+            img(src='images/twitter.gif', alt='twitter')
+          .icon
+            img(src='images/phone.gif', alt='Telefonos')
+            p TEL 2221 1210
+            p FAX 2221 6413
+          .icon
+            img(src='images/location.gif', alt='Dirección')
+            p Calle 7, avenidas 12 y 14.
+            p San Jose, Paseo de los Estudiantes del BCR 100 mts oeste y 50 mts Sur.
 
-  #Disponibles
-    .b-close
-    #content
-      each item in galery_data
-        if item.disp
-          -var itemId = item.name.replace(/ /g, '_')
-          div.table(id=itemId)
-            .pic
-              img.thumb(src='gallery/' + item.file)
-            .desc
-              h3 #{item.name}
-              p #{item.mat}
-              p #{item.dim}
-              p.price Valor $#{item.price}
-      
-  script(type='text/javascript' src='js/vendor.js')
-  script(type='text/javascript' src='js/main.min.js')
+    #Disponibles
+      .b-close
+      #content
+        each item in galery_data
+          if item.disp
+            -var itemId = item.name.replace(/ /g, '_')
+            div.table(id=itemId)
+              .pic
+                img.thumb(src='gallery/' + item.file alt= item.name)
+              .desc
+                h3 #{item.name}
+                p #{item.mat}
+                p #{item.dim}
+                p.price Valor $#{item.price}
+        
+    script(src='js/vendor.js')
+    script(src='js/main.min.js')
