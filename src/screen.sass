@@ -26,8 +26,8 @@ html
 body
   background-color: $cafe
   font-family: 'Red Hat Text'
-  font-size: 12px
-  line-height: 18px
+  font-size: 1rem
+  line-height: 1.2em
   color: darken($gris, 10%)
   margin: 0
   padding: 0
@@ -36,21 +36,30 @@ h1, h2, h3, h4
   font-family: 'corbertregular'
 
 p
-  font-size: 14px
+  font-size: 1em
 
 #wrapper
-  width: $ancho
-  height: 3000px
+  // height: 4000px
+  // width: 1300px
+  letter-spacing: -0.31em
+  text-rendering: optimizespeed
   margin: 0 auto
   background-color: $gris
   padding: 0
-  position: relative
+  // display: flex
+  // flex-flow: row wrap
+  // align-content: flex-start
 
 section
-  width: $ancho
-  height: $alto
+  width: 100%
+  height: 100vh
   margin: 0
   padding: 0
+  display: inline-block
+  letter-spacing: normal
+  word-spacing: normal
+  // vertical-align: top
+  text-rendering: auto 
   position: relative
 
 .center
@@ -68,31 +77,37 @@ section
   background-color: $blanco
 
 .logo
-  width: 249px
-  text-align: right
+  width: 18rem
+  text-align: center
   position: absolute
-  left: 60px
-  top: 45px
+  left: calc(30vw - 9em)
+  top: 18vh
   float: left
 
   h2 
-    font-size: 15px
+    font-size: 1.6em
     margin-top: 12px
 
   h1 
-    font-size: 25px
-    margin-top: 12px
+    font-size: 1.4em
+    margin-top: .2rem
+
+  #Rodolfo_Morales
+    fill: $cafe
+    margin: 1rem 2px .2rem 4px
 
 #main_image
   position: absolute
-  margin-top: 57px
-  margin-left: 505px
+  margin-top: calc(50vh - 270px)
+  margin-left: 50vw
 
 #main_message
   position: absolute
-  top: 305px
-  left: 113px
+  bottom: 0px
+  left: calc(30vw - 14em)
   text-align: center
+
+  line-height: 0
 
 .no-under
   text-decoration: none
@@ -103,6 +118,7 @@ section
   padding: 16px 22px
 
 #main_box
+  line-height: 1rem
   color: $gris
   border-color: $gris
   padding: 26px 22px 10px 22px
@@ -111,15 +127,17 @@ section
     background: $cafe
     color: white
 
+#main_arrow
+  height: 40vh
+
 .call
-  text-transform: none
-  font-size: 36px
+  font-size: 2.6em
+  font-weight: bold
   color: saturate($naranja, 40%)
   margin: 0px 0px 19px 0px 
   padding: 0px
 
 .credit
-  font-size: 13px
   text-align: right
   text-style: italic
 
@@ -127,21 +145,21 @@ section
 h3
   color: $naranja
   font-size: 20px
-  text-transform: uppercase
 
 #main_image_footer
   position: absolute
-  top: 530px
-  left: 830px
+  bottom: 40.5vh 
+  left: 76vw
   height: 82px
 
   p
-    font-size: 13px
+    font-size: 1em
     margin-top: 5px
 
   h4
-    color: $naranja
-    font-size: 15px
+    color: saturate($naranja, 30%)
+    font-weight: bold
+    font-size: 1.2em
     background-color: $cafe
     margin: 0px
     padding: 3px 3px 6px 6px
