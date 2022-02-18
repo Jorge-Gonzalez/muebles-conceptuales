@@ -1,0 +1,72 @@
+@use "sass:list"
+@use "sass:map"
+
+// Media Query Mixins
+//
+// Im using the media query generator function from Rafal Bromirski
+// sass-mediaqueries.
+//
+// Also I like the idea of Andrey Mikhaylov (@lolmaus) in breakpoint-slicer
+// of thinking in terms of the space between the breakpoints "the slice".
+// by using the mixins: from, to, at and between.
+
+// Media Query Breakpoints
+$breakpoints: (xs: 576px, sm: 768px, md: 992px, lg: 1200px, xl: 1400px)
+
+=mq($args...)
+  $media-type: 'only screen'
+  $media-type-key: 'media-type'
+  $args: keywords($args)
+  $expr: ''
+
+  @if map.has-key($args, $media-type-key)
+    $media-type: map.get($args, $media-type-key)
+    $args: map.remove($args, $media-type-key)
+
+  @each $key, $value in $args
+    @if $value
+      $expr: "#{$expr} and (#{$key}: #{$value})"
+
+  @media #{$media-type} #{$expr}
+    @content
+
+=trow-if-invalid($point)
+  @if not map.has-key($breakpoints, $point)
+    @error "#{$point} is not a breakpoint.\nBreakpoints are: #{map.keys($Breakpoints)}."
+
+@function breakpoint-index($point)
+  @return list.index(map.keys($breakpoints), $point)
+
+=to($point)
+  +trow-if-invalid($point)
+  @if breakpoint-index($point) == list.length(map.keys($breakpoints))
+    @error "This query doesn't exclude any viewport."
+  +mq($max-width: map.get($breakpoints, $point))
+    @content
+
+=from($point)
+  +trow-if-invalid($point)
+  @if breakpoint-index($point) == 1
+    @error "This query doesn't exclude any viewport."
+  +mq($min-width: map.get($breakpoints, $point))
+    @content
+
+=at($point)
+  +trow-if-invalid($point)
+  @if breakpoint-index($point) == 1
+    +to($point)
+      @content
+  @else
+    $prev: list.nth(map.values($breakpoints), list.index(map.keys($breakpoints), $point) - 1)
+    +mq($min-width: $prev, $max-width: map.get($breakpoints, $point))
+      @content
+
+=between($frst, $scnd)
+  +trow-if-invalid($frst)
+  +trow-if-invalid($scnd)
+  @if map.get($breakpoints, $frst) > map.get($breakpoints, $scnd)
+    @error "#{$frst} must be smaller than #{$scnd}."
+
+  +mq($min-width: map.get($breakpoints, $frst), $max-width: map.get($breakpoints, $scnd))
+    @content
+
