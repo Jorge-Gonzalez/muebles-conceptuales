@@ -21,9 +21,11 @@ module.exports = function(grunt){
 
     coffee: {
       compile: {
+        options: {
+          join: true
+        },
         files: {
-          'dist/js/main.js': 'src/main.coffee',
-          'dist/js/algo.js': 'src/algo.coffee'
+          'dist/js/main.js': ['src/OverReact.coffee', 'src/main.coffee']
         }
       }
     },
