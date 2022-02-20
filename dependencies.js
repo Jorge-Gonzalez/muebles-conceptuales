@@ -1,7 +1,8 @@
 module.exports = {
   dir: 'assets/vendor',
   js: [
-    'jquery-1.12.4',
+    'jquery-3.6.0',
+    'jquery-migrate-3.3.2',
     'jquery.easing.1.3',
     'jquery.skitter',
     'swiper-2.4.1',
