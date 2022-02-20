@@ -13,8 +13,7 @@ module.exports = function(grunt){
           data: require('./src/data.js') 
         },
         files: {
-          'dist/index.html': 'src/index.jade',
-          'dist/disponibles.html': 'src/disponibles.jade'
+          'dist/index.html': 'src/templates/index.pug',
         }
       }
     },
@@ -33,7 +32,7 @@ module.exports = function(grunt){
     compass: {
       dist: {
        options: {
-        sassDir: 'src/',
+        sassDir: 'src/styles/',
         cssDir: 'dist/css/',
         environment: 'production'
        }
@@ -44,10 +43,10 @@ module.exports = function(grunt){
       livereload: {
         options: { livereload: true },
         files: ['dist/js/*.js','dist/css/*.css','dist/*.html'],
-        //tasks: ['buildcss','jade','coffee']
+        //tasks: ['buildcss','pug','coffee']
       },
       html: {
-        files: ['src/index.jade','src/disponibles.jade'],
+        files: ['src/templates/index.pug','src/templates/disponibles.pug'],
         //tasks: ['htmlhint']
         tasks: ['pug']
       },
@@ -56,7 +55,7 @@ module.exports = function(grunt){
         tasks: ['coffee']
       },
       css: {
-        files: ['src/**/*.sass'],
+        files: ['src/styles/**/*.sass'],
         tasks: ['buildcss']
       }
     },

@@ -1,0 +1,16 @@
+#Disponibles
+  .b-close
+  #content
+    each item in galery_data
+      if item.disp
+        -var itemId = item.name.replace(/ /g, '_')
+        div.table(id=itemId)
+          picture.pic
+            source(type='image/avif' srcset='gallery/' + item.file + '.avif')
+            img.thumb(src='gallery/' + item.file + '.jpg' alt= item.name)
+          .desc
+            h3 #{item.name}
+            p #{item.mat}
+            p #{item.dim}
+            p.price Valor $#{item.price}
+    

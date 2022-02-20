@@ -195,21 +195,8 @@ html(lang='es')
             img(src='images/location.gif', alt='Dirección')
             p Calle 7, avenidas 12 y 14.
             p San Jose, Paseo de los Estudiantes del BCR 100 mts oeste y 50 mts Sur.
+    
+    include ./disponibles
 
-    #Disponibles
-      .b-close
-      #content
-        each item in galery_data
-          if item.disp
-            -var itemId = item.name.replace(/ /g, '_')
-            div.table(id=itemId)
-              .pic
-                img.thumb(src='gallery/' + item.file alt= item.name)
-              .desc
-                h3 #{item.name}
-                p #{item.mat}
-                p #{item.dim}
-                p.price Valor $#{item.price}
-        
     script(src='js/vendor.js')
     script(src='js/main.min.js')
