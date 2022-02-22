@@ -74,9 +74,7 @@ html(lang='es')
           ul
             each item in galery_data
               li
-                picture
-                  source(type='image/avif' srcset='gallery/' + item.file + '.avif')
-                  img.block(src='gallery/' + item.file + '.jpg' alt= item.name loading='lazy')
+                img.block(src='gallery/' + item.file + '.jpg' alt= item.name loading='lazy')
                 .label_text
                   if item.disp
                     //no hay de otra que poner onclick
