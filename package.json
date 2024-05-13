@@ -9,7 +9,7 @@
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
     "grunt-contrib-pug": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "^1.1.0",
